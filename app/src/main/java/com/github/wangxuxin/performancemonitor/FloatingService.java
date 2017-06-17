@@ -58,6 +58,9 @@ public class FloatingService extends Service{
     //触摸监听器
     GestureDetector mGestureDetector;
 
+    TextView hideView;
+    TextView textView;
+
     @Override
     public IBinder onBind(Intent intent) {
         return null;
@@ -77,7 +80,7 @@ public class FloatingService extends Service{
         Log.d("wxxDebugfunc","onStart");
         initFloating();//设置悬浮窗图标
 
-        final TextView textView =(TextView) mlayout.findViewById(R.id.floating_textView);
+        textView =(TextView) mlayout.findViewById(R.id.floating_textView);
         Handler mHandler=new Handler()
         {
             public void handleMessage(Message msg)
@@ -237,6 +240,17 @@ public class FloatingService extends Service{
             if (!isMove) {
                 //Toast.makeText(getApplicationContext(), "你点击了悬浮窗", 0).show();
                 System.out.println("onclick");
+                hideView = (TextView) mlayout.findViewById(R.id.floating_hideView);
+                Log.d("wxxDebug", String.valueOf(hideView.getVisibility()));
+                if(hideView.getVisibility()==0){
+                    hideView.setVisibility(8);
+                    textView.setVisibility(0);
+                    Log.d("wxxDebug","visible");
+                }else if(hideView.getVisibility()==8){
+                    hideView.setVisibility(0);
+                    textView.setVisibility(8);
+                    Log.d("wxxDebug","gone");
+                }
             }
             return super.onSingleTapConfirmed(e);
         }

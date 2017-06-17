@@ -42,7 +42,6 @@ public class CommandService extends Thread {
                 }if("".equals(line)){
                     continue;
                 }
-                Log.d("wxxDebug", line);
                 textUpdate.add(line);
             }
             Log.d("wxxDebug","stoptop");

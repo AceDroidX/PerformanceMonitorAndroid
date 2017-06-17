@@ -1,10 +1,13 @@
 package com.github.wangxuxin.performancemonitor;
 
+import android.content.Intent;
 import android.content.pm.PackageInfo;
 import android.content.pm.PackageManager;
+import android.net.Uri;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
+import android.view.View;
 import android.widget.TextView;
 
 /**
@@ -31,6 +34,17 @@ public class AboutActivity extends AppCompatActivity {
             copyrightText.setText("By wxx");
             Log.d("wxxDebugAbout","原程序已被修改！！！！By wxx");
         }
+
+        TextView websiteText = (TextView) findViewById(R.id.textView_website);
+        websiteText.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+                String url = "https://github.com/wangxuxin"; // web address
+                Intent intent = new Intent(Intent.ACTION_VIEW);
+                intent.setData(Uri.parse(url));
+                startActivity(intent);
+            }
+        });
     }
 
     /*

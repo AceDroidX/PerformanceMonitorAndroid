@@ -7,7 +7,16 @@
 
 
     <TextView
-            android:text="TextView"
+            android:text="@string/app_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" android:id="@+id/textView5" android:textColor="@android:color/black"
+            android:textSize="12sp"/>
+    <TextView
+            android:text="@string/hide"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content" android:id="@+id/floating_hideView" android:textColor="@android:color/black"
+            android:textSize="12sp" android:visibility="gone"/>
+    <TextView
             android:layout_width="match_parent"
             android:layout_height="wrap_content" android:id="@+id/floating_textView"
             android:textColor="@android:color/black"

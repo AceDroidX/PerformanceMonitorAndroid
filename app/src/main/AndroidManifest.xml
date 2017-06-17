@@ -17,6 +17,8 @@
                 <category android:name="android.intent.category.LAUNCHER"/>
             </intent-filter>
         </activity>
+        <activity android:name=".AboutActivity">
+        </activity>
         <service android:name="com.github.wangxuxin.performancemonitor.FloatingService"/>
     </application>
 

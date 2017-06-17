@@ -1,4 +1,5 @@
 <resources>
     <string name="app_name">Performance Monitor</string>
     <string name="about">about</string>
+    <string name="hide">Monitor has been hidden</string>
 </resources>

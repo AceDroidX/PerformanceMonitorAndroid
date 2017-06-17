@@ -2,4 +2,5 @@
 <resources>
     <string name="app_name">性能监视器</string>
     <string name="about">关于</string>
+    <string name="hide">监视器已隐藏</string>
 </resources>
